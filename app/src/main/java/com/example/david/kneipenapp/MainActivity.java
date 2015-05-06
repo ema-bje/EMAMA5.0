@@ -3,6 +3,7 @@ package com.example.david.kneipenapp;
 import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -14,13 +15,16 @@ public class MainActivity extends ActionBarActivity {
 
     private LokalDatasource datasource = new LokalDatasource(this);
     private ArrayList<Lokal> lokallist = datasource.getLokalList();
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        LokalAdapter lokalAdapter = new LokalAdapter(this, R.id.container);
+        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
 
@@ -46,11 +50,5 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public static class LokalAdapter extends ArrayAdapter {
 
-        public LokalAdapter(Context context, int resource) {
-            super(context, resource);
-        }
-
-    }
 }

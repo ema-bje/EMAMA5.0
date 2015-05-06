@@ -19,22 +19,22 @@ public class LokalDatasource {
 
     public LokalDatasource(Context context) {
         String name1 = "Alte F#rbe";
-        String adress1 = "Allmendstraße 45";
+        String adress1 = "Allmendstraße 15";
         String typ1 = "Restaurant/Bar";
         ImageView image1 = new ImageView(context);
-        image1.setImageResource(R.drawable.alteFaerbe);
+        image1.setImageResource(R.drawable.alte_faerbe);
 
         String name2 = "Falkenbengel";
-        String adress2 = "Allmendstraße 58";
+        String adress2 = "Allmendstraße 1";
         String typ2 = "Bar";
         ImageView image2 = new ImageView(context);
         image2.setImageResource(R.drawable.falkenbengel);
 
         String name3 = "Biercafé Engel";
-        String adress3 = "Baumannstraße 30";
+        String adress3 = "Baumannstraße 20";
         String typ3 = "Bar";
         ImageView image3 = new ImageView(context);
-        image3.setImageResource(R.drawable.biercafeEngel);
+        image3.setImageResource(R.drawable.biercafe_engel);
 
         lokal1 = new Lokal(name1, adress1, typ1, image1);
         lokal2 = new Lokal(name2, adress2, typ2, image2);

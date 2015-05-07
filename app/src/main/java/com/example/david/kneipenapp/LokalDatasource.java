@@ -17,29 +17,23 @@ public class LokalDatasource {
     private Lokal lokal3;
     private ArrayList<Lokal> lokalList = new ArrayList<>();
 
-    public LokalDatasource(Context context) {
-        String name1 = "Alte F#rbe";
+    public LokalDatasource() {
+        String name1 = "Alte Färbe";
         String address1 = "Allmendstraße 15";
         String typ1 = "Restaurant/Bar";
         int stars1 = 4;
-        ImageView image1 = new ImageView(context);
-        image1.setImageResource(R.drawable.alte_faerbe);
         int imgres1 = R.drawable.alte_faerbe;
 
         String name2 = "Falkenbengel";
         String address2 = "Allmendstraße 1";
         String typ2 = "Bar";
         int stars2 = 3;
-        ImageView image2 = new ImageView(context);
-        image2.setImageResource(R.drawable.falkenbengel);
         int imgres2 = R.drawable.falkenbengel;
 
         String name3 = "Biercafé Engel";
         String address3 = "Baumannstraße 20";
         String typ3 = "Bar";
         int stars3 = 5;
-        ImageView image3 = new ImageView(context);
-        image3.setImageResource(R.drawable.biercafe_engel);
         int imgres3 = R.drawable.biercafe_engel;
 
         lokal1 = new Lokal(name1, address1, typ1, stars1, imgres1);

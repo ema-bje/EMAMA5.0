@@ -30,6 +30,7 @@ public class KneipenAdapter extends RecyclerView.Adapter<KneipenAdapter.ListItem
             addressView = (TextView) itemView.findViewById(R.id.address);
             typ = (TextView) itemView.findViewById(R.id.type);
             stars = (TextView) itemView.findViewById(R.id.rating);
+            image = (ImageView) itemView.findViewById(R.id.imageView);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -3,6 +3,9 @@ package com.example.david.kneipenapp;
 import android.media.Image;
 import android.widget.ImageView;
 
+/**
+ * This is the Entity Class of a bar. It contains information about its name, address, type, rating and its image.
+ */
 public class Lokal {
     private String name;
     private String address;

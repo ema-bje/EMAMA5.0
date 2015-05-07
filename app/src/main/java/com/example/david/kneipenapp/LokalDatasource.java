@@ -12,12 +12,16 @@ import java.util.ArrayList;
  */
 public class LokalDatasource {
 
-    private ArrayList<Lokal> lokalList = new ArrayList<>();
+    private ArrayList<Lokal> lokalList = new ArrayList<>(); //the list where all bars will be stored
 
     public LokalDatasource() {
         build();
     }
 
+    /**
+     * makes all bars
+     * @return the arrayList containing all Lokal-Items
+     */
     public ArrayList<Lokal> build() {
         String[] names = {
                 "Alte Färbe",
@@ -80,10 +84,20 @@ public class LokalDatasource {
         return lokalList;
     }
 
+    /**
+     * Get the current version of the arrayList containing all bars
+     * @return the current version of the arrayList containing all bars
+     */
     public ArrayList<Lokal> getLokalList() {
         return lokalList;
     }
 
+    /**
+     * filters the array list. Only the bars matching the number of stars given as parameter will
+     * be returned
+     * @param stars the number of stars by which the function filters
+     * @return the ArrayList containing the bars matching the given number of stars
+     */
     public ArrayList<Lokal> filter(int stars) {
         if(stars == 0){
             return build();

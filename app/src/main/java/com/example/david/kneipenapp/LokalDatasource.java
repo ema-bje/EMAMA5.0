@@ -15,30 +15,36 @@ public class LokalDatasource {
     private Lokal lokal1;
     private Lokal lokal2;
     private Lokal lokal3;
-    private ArrayList<Lokal> lokalList = new ArrayList<Lokal>();
+    private ArrayList<Lokal> lokalList = new ArrayList<>();
 
     public LokalDatasource(Context context) {
         String name1 = "Alte F#rbe";
-        String adress1 = "Allmendstraße 15";
+        String address1 = "Allmendstraße 15";
         String typ1 = "Restaurant/Bar";
+        int stars1 = 4;
         ImageView image1 = new ImageView(context);
         image1.setImageResource(R.drawable.alte_faerbe);
+        int imgres1 = R.drawable.alte_faerbe;
 
         String name2 = "Falkenbengel";
-        String adress2 = "Allmendstraße 1";
+        String address2 = "Allmendstraße 1";
         String typ2 = "Bar";
+        int stars2 = 3;
         ImageView image2 = new ImageView(context);
         image2.setImageResource(R.drawable.falkenbengel);
+        int imgres2 = R.drawable.falkenbengel;
 
         String name3 = "Biercafé Engel";
-        String adress3 = "Baumannstraße 20";
+        String address3 = "Baumannstraße 20";
         String typ3 = "Bar";
+        int stars3 = 5;
         ImageView image3 = new ImageView(context);
         image3.setImageResource(R.drawable.biercafe_engel);
+        int imgres3 = R.drawable.biercafe_engel;
 
-        lokal1 = new Lokal(name1, adress1, typ1, image1);
-        lokal2 = new Lokal(name2, adress2, typ2, image2);
-        lokal3 = new Lokal(name3, adress3, typ3, image3);
+        lokal1 = new Lokal(name1, address1, typ1, stars1, imgres1);
+        lokal2 = new Lokal(name2, address2, typ2, stars2, imgres2);
+        lokal3 = new Lokal(name3, address3, typ3, stars3, imgres3);
 
         lokalList.add(lokal1);
         lokalList.add(lokal2);
@@ -51,15 +57,4 @@ public class LokalDatasource {
         return lokalList;
     }
 
-    public Lokal getLokal1() {
-        return lokal1;
-    }
-
-    public Lokal getLokal2() {
-        return lokal2;
-    }
-
-    public Lokal getLokal3() {
-        return lokal3;
-    }
 }

@@ -3,4 +3,11 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="listAddress">Adresse:</string>
+    <string name="listType">Typ:</string>
+    <string name="ListRating">Rating:</string>
+    <string name="listRatingContent">Small Text</string>
+    <string name="listTypeContent">Small Text</string>
+    <string name="listAddressContent">Small Text</string>
+    <string name="listBarName">Title</string>
 </resources>

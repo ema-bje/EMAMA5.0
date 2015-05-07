@@ -1,55 +1,38 @@
 package com.example.david.kneipenapp;
 
-import android.widget.ImageView;
-
-/**
- * Created by David on 30.04.2015.
- */
 public class Lokal {
     private String name;
-    private String adress;
+    private String address;
     private String typ;
-    private ImageView image;
+    private int stars;
+    private int imageResource;
 
-    public Lokal() {
-    }
-
-    public Lokal(String name, String adress, String typ, ImageView image) {
+    public Lokal(String name, String address, String typ, int stars, int imageResource) {
         this.name = name;
-        this.adress = adress;
+        this.address = address;
         this.typ = typ;
-        this.image = image;
+        this.stars = stars;
+        this.imageResource = imageResource;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAdress() {
-        return adress;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public String getAddress() {
+        return address;
     }
 
     public String getTyp() {
         return typ;
     }
 
-    public void setTyp(String typ) {
-        this.typ = typ;
+    public int getStars() {
+        return stars;
     }
 
-    public ImageView getImage() {
-        return image;
+    public int getImageResource() {
+        return imageResource;
     }
 
-    public void setImage(ImageView image) {
-        this.image = image;
-    }
 }

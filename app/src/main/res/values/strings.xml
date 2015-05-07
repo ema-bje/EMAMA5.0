@@ -10,4 +10,12 @@
     <string name="listTypeContent">Small Text</string>
     <string name="listAddressContent">Small Text</string>
     <string name="listBarName">Title</string>
+
+    <array name="stars">
+        <item>5 Sterne</item>
+        <item>4 Sterne</item>
+        <item>3 Sterne</item>
+        <item>2 Sterne</item>
+        <item>1 Stern</item>
+    </array>
 </resources>

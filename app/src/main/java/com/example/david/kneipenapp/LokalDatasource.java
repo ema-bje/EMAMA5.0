@@ -12,43 +12,71 @@ import java.util.ArrayList;
  */
 public class LokalDatasource {
 
-    private Lokal lokal1;
-    private Lokal lokal2;
-    private Lokal lokal3;
     private ArrayList<Lokal> lokalList = new ArrayList<>();
 
     public LokalDatasource() {
-        String name1 = "Alte Färbe";
-        String address1 = "Allmendstraße 15";
-        String typ1 = "Restaurant/Bar";
-        int stars1 = 4;
-        int imgres1 = R.drawable.alte_faerbe;
 
-        String name2 = "Falkenbengel";
-        String address2 = "Allmendstraße 1";
-        String typ2 = "Bar";
-        int stars2 = 3;
-        int imgres2 = R.drawable.falkenbengel;
+        String[] names = {
+                "Alte Färbe",
+                "Falkenbengel",
+                "Biercafe Engel",
+                "Cop Bar",
+                "Irish Pub",
+                "The Golden Loon",
+                "Gasthaus Dogfood",
+                "Hard Rock Cafe",
+        };
 
-        String name3 = "Biercafé Engel";
-        String address3 = "Baumannstraße 20";
-        String typ3 = "Bar";
-        int stars3 = 5;
-        int imgres3 = R.drawable.biercafe_engel;
+        String[] addresses = {
+                "Allmendstraße 15",
+                "Allmendstraße 1",
+                "Baumannstraße 20",
+                "Baumannstraße 11",
+                "Baumannstraße 11",
+                "Baumannstraße 11",
+                "Baumannstraße 11",
+                "Baumannstraße 11",
+        };
 
-        lokal1 = new Lokal(name1, address1, typ1, stars1, imgres1);
-        lokal2 = new Lokal(name2, address2, typ2, stars2, imgres2);
-        lokal3 = new Lokal(name3, address3, typ3, stars3, imgres3);
+        String[] types = {
+                "Restaurant/Bar",
+                "Bar",
+                "Bar",
+                "Gasthaus",
+                "Pub",
+                "Gasthaus",
+                "Bar",
+                "Pub"
+        };
 
-        lokalList.add(lokal1);
-        lokalList.add(lokal2);
-        lokalList.add(lokal3);
+        int[] ratings = {
+                4,
+                3,
+                5,
+                3,
+                3,
+                3,
+                3,
+                3
+        };
+
+        int[] imgresources = {
+                R.drawable.alte_faerbe,
+                R.drawable.falkenbengel,
+                R.drawable.biercafe_engel,
+                R.drawable.falkenbengel,
+                R.drawable.falkenbengel,
+                R.drawable.falkenbengel,
+                R.drawable.falkenbengel,
+                R.drawable.falkenbengel,
+        };
+
+        for (int i=0;i<names.length;i++) {
+            lokalList.add(new Lokal(names[i], addresses[i], types[i], ratings[i], imgresources[i]));
+        }
     }
-
-
 
     public ArrayList<Lokal> getLokalList() {
         return lokalList;
     }
-
 }

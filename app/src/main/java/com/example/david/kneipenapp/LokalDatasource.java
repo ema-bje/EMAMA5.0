@@ -15,7 +15,10 @@ public class LokalDatasource {
     private ArrayList<Lokal> lokalList = new ArrayList<>();
 
     public LokalDatasource() {
+        build();
+    }
 
+    public ArrayList<Lokal> build() {
         String[] names = {
                 "Alte Färbe",
                 "Falkenbengel",
@@ -74,6 +77,7 @@ public class LokalDatasource {
         for (int i=0;i<names.length;i++) {
             lokalList.add(new Lokal(names[i], addresses[i], types[i], ratings[i], imgresources[i]));
         }
+        return lokalList;
     }
 
     public ArrayList<Lokal> getLokalList() {
@@ -81,7 +85,18 @@ public class LokalDatasource {
     }
 
     public ArrayList<Lokal> filter(int stars) {
+        if(stars == 0){
+            return build();
+        }
+
         ArrayList<Lokal> returnList = new ArrayList<Lokal>();
+
+        for(int i = 0; i<lokalList.size();i++){
+            if(lokalList.get(i).getStars()==stars){
+                returnList.add(lokalList.get(i));
+            }
+        }
+
         return returnList;
     }
 }

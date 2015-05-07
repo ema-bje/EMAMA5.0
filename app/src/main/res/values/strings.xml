@@ -12,6 +12,7 @@
     <string name="listBarName">Title</string>
 
     <array name="stars">
+        <item>Kein Filter</item>
         <item>5 Sterne</item>
         <item>4 Sterne</item>
         <item>3 Sterne</item>

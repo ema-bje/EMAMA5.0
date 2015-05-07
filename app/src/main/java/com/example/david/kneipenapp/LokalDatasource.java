@@ -79,4 +79,9 @@ public class LokalDatasource {
     public ArrayList<Lokal> getLokalList() {
         return lokalList;
     }
+
+    public ArrayList<Lokal> filter(int stars) {
+        ArrayList<Lokal> returnList = new ArrayList<Lokal>();
+        return returnList;
+    }
 }

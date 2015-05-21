@@ -4,6 +4,7 @@ import android.app.LauncherActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,14 +47,14 @@ public class KneipenAdapter extends RecyclerView.Adapter<KneipenAdapter.ListItem
             typ = (TextView) itemView.findViewById(R.id.type);
             stars = (TextView) itemView.findViewById(R.id.rating);
             image = (ImageView) itemView.findViewById(R.id.imageView);
-            src = R.id.imageView;
 
             //display a toast with the bar name inside when a user clicks on an item
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(view.getContext(),headlineView.getText(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(view.getContext(), headlineView.getText(), Toast.LENGTH_LONG).show();
                     final Intent intent = new Intent(sContext, DetailActivity.class);
+                    src = LokalDatasource.findResourceByKneipe(headlineView.getText().toString());
                     intent.putExtra("headline", headlineView.getText());
                     intent.putExtra("address", addressView.getText());
                     intent.putExtra("typ", typ.getText());

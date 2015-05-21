@@ -12,9 +12,9 @@ import java.util.ArrayList;
  */
 public class LokalDatasource {
 
-    private ArrayList<Lokal> lokalList = new ArrayList<>(); //the list where all bars will be stored
+    private static ArrayList<Lokal> lokalList = new ArrayList<>(); //the list where all bars will be stored
 
-    public LokalDatasource() {
+    public static void Main(String[] args) {
         build();
     }
 
@@ -22,7 +22,7 @@ public class LokalDatasource {
      * makes all bars
      * @return the arrayList containing all Lokal-Items
      */
-    public ArrayList<Lokal> build() {
+    public static ArrayList<Lokal> build() {
         String[] names = {
                 "Alte Färbe",
                 "Falkenbengel",
@@ -88,7 +88,7 @@ public class LokalDatasource {
      * Get the current version of the arrayList containing all bars
      * @return the current version of the arrayList containing all bars
      */
-    public ArrayList<Lokal> getLokalList() {
+    public static ArrayList<Lokal> getLokalList() {
         return lokalList;
     }
 
@@ -98,7 +98,7 @@ public class LokalDatasource {
      * @param stars the number of stars by which the function filters
      * @return the ArrayList containing the bars matching the given number of stars
      */
-    public ArrayList<Lokal> filter(int stars) {
+    public static ArrayList<Lokal> filter(int stars) {
         if(stars == 0){
             return build();
         }
@@ -112,5 +112,15 @@ public class LokalDatasource {
         }
 
         return returnList;
+    }
+
+    public static int findResourceByKneipe(String name){
+        int image = -1;
+        for (int i=0; i<lokalList.size();i++){
+            if(lokalList.get(i).getName().equals(name)){
+                image = lokalList.get(i).getImageResource();
+            }
+        }
+        return image;
     }
 }

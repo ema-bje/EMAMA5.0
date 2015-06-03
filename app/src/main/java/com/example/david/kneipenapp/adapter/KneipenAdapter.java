@@ -1,16 +1,19 @@
-package com.example.david.kneipenapp;
+package com.example.david.kneipenapp.adapter;
 
-import android.app.LauncherActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.david.kneipenapp.Lokal;
+import com.example.david.kneipenapp.LokalDatasource;
+import com.example.david.kneipenapp.R;
+import com.example.david.kneipenapp.activities.DetailActivity;
 
 import java.util.ArrayList;
 

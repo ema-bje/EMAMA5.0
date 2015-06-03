@@ -1,4 +1,4 @@
-package com.example.david.kneipenapp;
+package com.example.david.kneipenapp.activities;
 
 
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.david.kneipenapp.R;
 
 /**
  * Created by nebi on 07.05.15.

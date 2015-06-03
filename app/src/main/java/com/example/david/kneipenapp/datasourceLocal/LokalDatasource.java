@@ -1,7 +1,6 @@
-package com.example.david.kneipenapp;
+package com.example.david.kneipenapp.datasourceLocal;
 
-import android.content.Context;
-import android.widget.ImageView;
+import com.example.david.kneipenapp.R;
 
 import java.util.ArrayList;
 
